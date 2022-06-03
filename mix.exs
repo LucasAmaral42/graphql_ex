@@ -44,7 +44,10 @@ defmodule GraphqlEx.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
-      {:credo, "~> 1.6"}
+      {:credo, "~> 1.6"},
+      {:absinthe, "~> 1.7"},
+      {:absinthe_phoenix, "~> 2.0"},
+      {:absinthe_plug, "~> 1.5.0"},
     ]
   end
 

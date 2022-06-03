@@ -5,8 +5,11 @@ defmodule GraphqlExWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", GraphqlExWeb do
+  scope "/api" do
     pipe_through :api
+
+    forward "/graphql", Absinthe.Plug, schema: GraphqlExWeb.Schema
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: GraphqlExWeb.Schema
   end
 
   # Enables LiveDashboard only for development
